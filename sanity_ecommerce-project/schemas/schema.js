@@ -9,6 +9,7 @@ import category from './category'
 import product from './product'
 import vendor from './vendor'
 import productVariant from './productVariant'
+import banner from './banner'
 
 import localeString from './locale/String'
 import localeText from './locale/Text'
@@ -24,8 +25,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     product,
-    vendor,
-    category,
+    banner,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
