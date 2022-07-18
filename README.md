@@ -1,7 +1,7 @@
 ## Ecommerce App
 
 ## Description
-- Utilizes Sanity.io for database configuration and management.  Saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.  
+- Utilizes Sanity.io for database configuration and content management.  I saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.
 
 ## Helpful Sanity Commands
 - "sanity docs" = explore sanity studio in browser
