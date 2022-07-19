@@ -6,5 +6,5 @@
 ## Helpful Sanity Commands
 - "sanity docs" = explore sanity studio in browser
 - "sanity manage" = opens up sanity manager in browser
-- "sanity start" = spin up content studio on localhost
+- "sanity start" = opens up sanity dataset studio in the browser.  This is where you can create, update, and delete products, sales, etc.
 
