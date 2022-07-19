@@ -21,12 +21,13 @@ const Home = ({ products, bannerData }) => {
 
      
 
-      Footer
-    </>
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
+   </>
   )
 }
 
-// Need to user gerServerSideProps with Next.js instead of a useEffect used in React
+{/* // Need to user gerServerSideProps with Next.js instead of a useEffect used in React */}
+
 export const getServerSideProps = async () => {
   // Grab all (*) products from our Sanity Dashboard
   const query = '*[_type == "product"]';
@@ -41,7 +42,6 @@ export const getServerSideProps = async () => {
     props: { products, bannerData } 
   }
 
-
 }
 
-export default Home
+export default Home;
