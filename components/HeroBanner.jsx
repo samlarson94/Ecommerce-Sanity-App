@@ -1,5 +1,8 @@
 import React from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+
+// Import necessary urlFor const from lib/client
+import { urlFor } from '../lib/client';
 
 const HeroBanner = ({ heroBanner }) => {
   return (
@@ -8,7 +11,10 @@ const HeroBanner = ({ heroBanner }) => {
         {/* DEV NOTE: All CAPITAL text will be dynamic data fed from Sanity */}
         <p className='beats-solo'>{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
-        <img src="" alt="headphones" className='hero-banner-image'></img>
+        <h1>{heroBanner.largeText1}</h1>
+
+        {/* Make sure to import urlFor from lib/client */}
+        <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image'></img>
 
         <div>
           <Link href='/product/ID'>
