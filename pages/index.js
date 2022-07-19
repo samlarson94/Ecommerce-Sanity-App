@@ -1,10 +1,15 @@
+// Import React and Required Components
 import React from 'react';
 import {Product, FooterBanner, HeroBanner} from '../components';
 
-const Home = () => {
+// Import client from Sanity Lib
+import { client } from '../lib/client'
+
+const Home = ({ products, bannerData }) => {
   return (
     <>
       <HeroBanner />
+      {console.log(bannerData)}
 
       <div className="products-heading">
         <h2>Best Selling Products</h2>
@@ -12,12 +17,29 @@ const Home = () => {
       </div>
 
       <div className="products-container">
-        {['Product 1', 'Product 2'].map((product) => product)}
+        {products?.map((product) => product.name)}
       </div>
 
       Footer
     </>
   )
+}
+
+// Need to user gerServerSideProps with Next.js instead of a useEffect used in React
+export const getServerSideProps = async () => {
+  // Grab all (*) products from our Sanity Dashboard
+  const query = '*[_type == "product"]';
+  // Create products constant and await API query
+  const products = await client.fetch(query);
+
+  // Banner Information
+  const bannerQuery = '*[_type == "banner"]';
+  const bannerData = await client.fetch(bannerQuery);
+
+  return {
+    props: { products, bannerData } 
+  }
+
 }
 
 export default Home
