@@ -12,7 +12,6 @@ const HeroBanner = ({ heroBanner }) => {
         <p className='beats-solo'>{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-
         {/* Make sure to import urlFor from lib/client */}
         <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image'></img>
 
