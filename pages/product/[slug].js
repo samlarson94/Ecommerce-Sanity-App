@@ -15,17 +15,20 @@ const ProductDetails = ({ product, products }) => {
         <div className="product-detail-container">
             <div>
                 <div className="image-container">
-                    <img src={urlFor(image && image[0])} />
+                    <img className="product-detail-image" src={urlFor(image && image[index])} />
                 </div>
-                {/* <div className="small-images-container">
+                
+                <div className="small-images-container">
                     {image?.map((item, i) => (
                         <img
                         src={urlFor(item)}
-                        className=""
-                        onMouseEnter=""
+                        // Adding dynamic className to control image sizing via CSS classes based on what photo has been selected. 
+                        className={i === index ? 'small-image selected-image' : 'small-image'}
+                        // {/* Adding function to onMouseEnter to set image index to the photo selected.  */}
+                        onMouseEnter={() => setIndex(i)}
                         />
                     ))}
-                </div> */}
+                </div>
             </div>
             <div className="product-detail-desc">
                 <h1>{name}</h1>
