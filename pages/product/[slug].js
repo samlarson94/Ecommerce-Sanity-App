@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
@@ -7,6 +7,8 @@ import { Product } from '../../components';
 const ProductDetails = ({ product, products }) => {
     // Destructure values received from product and products
     const { image, name, details, price } = product;
+
+    const [index, setIndex] = useState(0);
 
     return (
     <div>
