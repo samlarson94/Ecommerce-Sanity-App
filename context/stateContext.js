@@ -51,15 +51,16 @@ export const StateContext = ({ children }) => {
     const toggleCartItemQuantity = (id, value) => {
         // Find product we are updating - create variable in functional component to store value
             // Loop over cartItems and find matching id
-        foundProduct = cartItems.find((item) => item._id === id );
+            foundProduct = cartItems.find((item) => item._id === id)
             // Track index of product within cartItems
-        index = cartItems.findIndex((product) => product._id === id);
+            index = cartItems.findIndex((product) => product._id === id);
+
+        const newCartItems = cartItems.filter((item) => item._id !== id);
 
         // Increment and Decrement Qty
         if(value === 'inc') {
             // Update cart items using setter function - do not mutate the state
-            let newCartItems = [...cartItems, { ...foundProduct, quantity: foundProduct.quantity + 1} ];
-            setCartItems(newCartItems);
+            setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 } ]);
                 // foundProduct.quantity += 1;
                 // cartItems[index] = foundProduct;
             // Set new total price
@@ -68,8 +69,7 @@ export const StateContext = ({ children }) => {
             setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1)
         } else if(value === 'dec'){
             if (foundProduct.quantity > 1) {
-                let newCartItems = [...cartItems, { ...foundProduct, quantity: foundProduct.quantity - 1} ];
-                setCartItems(newCartItems);
+                setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 } ]);
                 setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
                 setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
             }
@@ -100,7 +100,8 @@ export const StateContext = ({ children }) => {
                 qty,
                 incQty,
                 decQty,
-                onAdd
+                onAdd,
+                toggleCartItemQuantity
             }}>
             { children }
         </Context.Provider>
