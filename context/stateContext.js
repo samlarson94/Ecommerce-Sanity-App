@@ -47,6 +47,23 @@ export const StateContext = ({ children }) => {
         }
     }
 
+    //onRemove Cart Logic
+    const onRemove = (product) => {
+        //Find Product
+        foundProduct = cartItems.find((item) => item._id === product._id);
+        const newCartItems = cartItems.filter((item) => item._id !== product._id);
+
+        //Update total cart price
+        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+
+        //Update total cart quantity
+        setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
+
+        //Set Cart Items
+        setCartItems(newCartItems);
+    }
+
+
     //Toggle Cart Item Quantity
     const toggleCartItemQuantity = (id, value) => {
         // Find product we are updating - create variable in functional component to store value
@@ -101,7 +118,8 @@ export const StateContext = ({ children }) => {
                 incQty,
                 decQty,
                 onAdd,
-                toggleCartItemQuantity
+                toggleCartItemQuantity,
+                onRemove
             }}>
             { children }
         </Context.Provider>
