@@ -10,6 +10,9 @@ export const StateContext = ({ children }) => {
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
 
+    let foundProduct;
+    let index;
+
     // On Add Function
     const onAdd = (product, quantity) => {
         //Check if item is already in cart
@@ -44,7 +47,34 @@ export const StateContext = ({ children }) => {
         }
     }
 
-    //
+    //Toggle Cart Item Quantity
+    const toggleCartItemQuantity = (id, value) => {
+        // Find product we are updating - create variable in functional component to store value
+            // Loop over cartItems and find matching id
+        foundProduct = cartItems.find((item) => item._id === id );
+            // Track index of product within cartItems
+        index = cartItems.findIndex((product) => product._id === id);
+
+        // Increment and Decrement Qty
+        if(value === 'inc') {
+            // Update cart items using setter function - do not mutate the state
+            let newCartItems = [...cartItems, { ...foundProduct, quantity: foundProduct.quantity + 1} ];
+            setCartItems(newCartItems);
+                // foundProduct.quantity += 1;
+                // cartItems[index] = foundProduct;
+            // Set new total price
+            setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+            // Set new total quantity
+            setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1)
+        } else if(value === 'dec'){
+            if (foundProduct.quantity > 1) {
+                let newCartItems = [...cartItems, { ...foundProduct, quantity: foundProduct.quantity - 1} ];
+                setCartItems(newCartItems);
+                setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+                setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
+            }
+        }
+    }
 
     //Function to increase quantity
     const incQty = () => {
