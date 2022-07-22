@@ -13,7 +13,7 @@ const Cart = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     const stripe = await getStripe();
 
   // API call to our own Next.js API backend
