@@ -14,16 +14,18 @@ const Cart = () => {
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
+    //Create new instance of Stripe promise (built in lib/getStripe.js)
     const stripe = await getStripe();
 
-  // API call to our own Next.js API backend
+    // Create API request to our own Next.js API backend
     const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(cartItems),
     });
+    
 
     if(response.statusCode === 500) return;
 
