@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+
 // Import necessary urlFor const from lib/client
 import { urlFor } from '../lib/client';
 
