@@ -8,3 +8,6 @@
 - "sanity manage" = opens up sanity manager in browser
 - "sanity start" = opens up sanity dataset studio in the browser.  This is where you can create, update, and delete products, sales, etc.
 
+## Confetti Resource
+- Easy confetti animation available at https://www.npmjs.com/package/canvas-confetti
+
