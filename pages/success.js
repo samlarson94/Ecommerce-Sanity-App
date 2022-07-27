@@ -14,6 +14,15 @@ const Success = () => {
                 <BsBagCheckFill />
             </p>
             <h2>Thank you for your order!</h2>
+            <br></br>
+            <p className='email-msg'>Check your email inbox for the receipt.</p>
+            <p className='description'>
+              If you have any questions, please email&nbsp;
+              <a classname="email" href="mailto:orderhelp@placefiller.com">order@speakercity.com</a>
+            </p>
+            <Link href="/">
+              <button type="button" width="300px" className='btn'>Continue Shopping</button>
+            </Link>
         </div>
         
     </div>
