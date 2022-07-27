@@ -23,6 +23,7 @@ const ProductDetails = ({ product, products }) => {
                 <div className="small-images-container">
                     {image?.map((item, i) => (
                         <img
+                        key={i}
                         src={urlFor(item)}
                         // Adding dynamic className to control image sizing via CSS classes based on what photo has been selected. 
                         className={i === index ? 'small-image selected-image' : 'small-image'}

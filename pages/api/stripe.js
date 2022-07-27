@@ -21,6 +21,7 @@ export default async function handler(req, res) {
           const img = item.image[0].asset._ref;
           const newImage = img.replace('image-', 'https://cdn.sanity.io/images/uyc34e4c/production/').replace('-webp', '.webp');
 
+          //Return object with product information
           return {
             price_data: { 
               currency: 'usd',
@@ -28,13 +29,13 @@ export default async function handler(req, res) {
                 name: item.name,
                 images: [newImage],
               },
-              unit_amount: item.price * 100,
+              unit_amount: item.price * 100, //Unit amount needs to be in cents.
             },
             adjustable_quantity: {
               enabled:true,
               minimum: 1,
             },
-            quantity: item.quantity
+            quantity: item.quantity //Starting quantity
           }
         }),
         success_url: `${req.headers.origin}/success`,
