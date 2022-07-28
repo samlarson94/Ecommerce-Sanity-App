@@ -17,7 +17,7 @@ const Navbar = () => {
           <p>Speaker City</p>
         </Link>
       </p>
-      <img className="logo-img" src='#' alt="Speaker City Logo" />
+      {/* <img className="logo-img" src='#' alt="Speaker City Logo" /> */}
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
         <span className="cart-itm-qty">{totalQuantities}</span>
