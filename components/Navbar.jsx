@@ -12,8 +12,12 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">Speaker City</Link>
+        <Link href="/">
+          {/* <img src='ecommerce-sanity-app/styles/assets/Speaker City Logo Red.png' height="20px" width="20px"/> */}
+          <p>Speaker City</p>
+        </Link>
       </p>
+      <img className="logo-img" src='#' alt="Speaker City Logo" />
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
         <span className="cart-itm-qty">{totalQuantities}</span>

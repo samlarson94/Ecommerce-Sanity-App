@@ -71,6 +71,11 @@ width: 100%;
   font-size: 18px;
 
 }
+
+.logo-img {
+  height: 20px;
+  width: auto;
+}
 .cart-icon{
   font-size: 25px;
   color: gray;
