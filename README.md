@@ -1,7 +1,9 @@
 ## Ecommerce App
 
 ## Description
+- Built with React.js and Next.js, this responsive web store can easily be altered to fit future client's needs.
 - Utilizes Sanity.io for database configuration and content management.  I saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.
+- Utilizes Stripe for payments.  I saw this as an important technology to gain experience with and the most secure solution for checkout.
 
 ## Helpful Sanity Commands
 - "sanity docs" = explore sanity studio in browser (works anywhere within project)
