@@ -3,9 +3,10 @@
 ![Screen Shot 2022-09-07 at 12 36 46 PM](https://user-images.githubusercontent.com/24683662/188943642-731aa4a6-57d2-4146-9d61-ef334533883b.png)
 
 ## Description
-- Built with React.js and Next.js, this responsive web store can easily be altered to fit future client's needs.
-- Utilizes Sanity.io for database configuration and content management.  I saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.
+- Built with React.js and Next.js, this responsive web store can easily be altered to fit a future client's needs.
+- Utilizes Sanity.io for simple database configuration and content management.  I saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.
 - Utilizes Stripe for payments.  I saw this as an important technology to gain experience with and the most secure solution for checkout.
+- CSS Development and Styling still under development.
 
 ## Helpful Sanity Commands
 - "sanity docs" = explore sanity studio in browser (works anywhere within project)
