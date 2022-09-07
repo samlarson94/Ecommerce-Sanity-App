@@ -1,4 +1,6 @@
-## Ecommerce App
+## Ecommerce Speaker City App
+
+![Screen Shot 2022-09-07 at 12 36 46 PM](https://user-images.githubusercontent.com/24683662/188943642-731aa4a6-57d2-4146-9d61-ef334533883b.png)
 
 ## Description
 - Built with React.js and Next.js, this responsive web store can easily be altered to fit future client's needs.
@@ -13,3 +15,7 @@
 ## Confetti Resource
 - Easy confetti animation available at https://www.npmjs.com/package/canvas-confetti
 
+## Visuals
+![Screen Shot 2022-09-07 at 12 37 31 PM](https://user-images.githubusercontent.com/24683662/188943495-9ebc3097-1cdf-4024-97a5-c32ce14aa19f.png)
+![Screen Shot 2022-09-07 at 12 38 19 PM](https://user-images.githubusercontent.com/24683662/188943497-eb539a82-86b5-420a-b294-08a639bd96c5.png)
+![Screen Shot 2022-09-07 at 12 37 53 PM](https://user-images.githubusercontent.com/24683662/188943498-960c7ebc-80b6-44bb-806b-3f6d626ff3d6.png)
