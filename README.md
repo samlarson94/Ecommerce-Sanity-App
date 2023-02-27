@@ -6,7 +6,7 @@
 - Built with React.js and Next.js, this responsive web store can easily be altered to fit a future client's needs.
 - Utilizes Sanity.io for simple database configuration and content management.  I saw this as a solution to save time and energy when setting up and maintaining the backend server, database, and schemas.
 - Utilizes Stripe for payments.  I saw this as an important technology to gain experience with and the most secure solution for checkout.
-- CSS Development and Styling still under development.
+- CSS Development and Styling still under development. I would love to make this into a modern version of "Speaker City", Vince Vaughn's electronic store in the comedy "Old School". 
 
 ## Helpful Sanity Commands
 - "sanity docs" = explore sanity studio in browser (works anywhere within project)
